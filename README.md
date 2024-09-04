@@ -18,9 +18,7 @@ Inside the folder `utils`, create a file redis.js that contains the class `Redis
 After the class definition, create and export an instance of RedisClient called redisClient.
 ***
 ***
-<hr>
 ### 1.MongoDB utils
-<hr>
 
 Inside the folder `utils`, create a file `db.js` that contains the class
 `DBClient`.
