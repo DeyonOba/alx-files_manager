@@ -50,7 +50,7 @@ Inside the folder `controllers`, create a file `AppController.js` that contains 
     - `users` collection must be used for counting all users
     - `files` collection must be used for counting all files
 
-** Terminal 1:**
+**Terminal 1:**
 
 ```bash
 username@localhost:~$ npm run start-server
@@ -58,7 +58,7 @@ Server running on port 5000
 ...
 ```
 
-** Terminal 2:**
+**Terminal 2:**
 
 ```bash
 username@localhost:~$ curl 0.0.0.0:5000/status ; echo ""
