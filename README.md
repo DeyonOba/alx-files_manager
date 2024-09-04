@@ -36,3 +36,34 @@ Inside the folder `utils`, create a file `db.js` that contains the class
 After the class definition, create and export an instance of `DBClient` called `dbClient`.
 ***
 ***
+### 2.FirstAPI
+
+Inside `server.js`, create the Express server:
+
+- it should listen on the port set by the environment variable `PORT` or by default 5000
+- it should load all routes from the file `routes/index.js`
+
+Inside the folder `controllers`, create a file `AppController.js` that contains the definition of the 2 endpoints:
+
+- `GET /status` should return if Redis is alive and if the DB is alive too by using the 2 utils created previously: `{ "redis": true, "db": true }` with a status code 200.
+- `GET /stats` should return the number of users and files in DB: `{ "users": 12, "files": 1231 }` with a status code 200
+    - `users` collection must be used for counting all users
+    - `files` collection must be used for counting all files
+
+** Terminal 1:**
+
+```bash
+username@localhost:~$ npm run start-server
+Server running on port 5000
+...
+```
+
+** Terminal 2:**
+
+```bash
+username@localhost:~$ curl 0.0.0.0:5000/status ; echo ""
+{"redis":true,"db": true}
+username@localhost:~$ curl 0.0.0.0:5000/stats ; echo ""
+{"users":4,"files":30}
+username@localhost:~$
+```
